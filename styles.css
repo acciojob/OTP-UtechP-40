@@ -1,1 +1,18 @@
 /*  your css code here. If applicable */
+.code-container{
+    display: flex;
+    justify-content: space-around;
+}
+.code{
+    width: 250px;
+    height: 250px;
+    border: 2px solid black;
+    font-size: 100px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.code::placeholder{
+    text-align: center;
+}
