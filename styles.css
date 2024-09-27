@@ -1,18 +1,20 @@
-/*  your css code here. If applicable */
-.code-container{
+.code-container {
     display: flex;
     justify-content: space-around;
 }
-.code{
-    width: 250px;
-    height: 250px;
+
+.code {
+    width: 60px;
+    height: 60px;
     border: 2px solid black;
-    font-size: 100px;
+    font-size: 30px;
     text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 5px;
 }
-.code::placeholder{
+
+.code::placeholder {
     text-align: center;
 }

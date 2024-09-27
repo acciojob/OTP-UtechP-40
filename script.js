@@ -1,8 +1,15 @@
-//your JS code here. If required.
-let codes = document.querySelectorAll(".code")
+let codes = document.querySelectorAll(".code");
 
-for(let i =0;i<codes.length-1;i++){
-    codes[i].addEventListener("input",()=>{
-        codes[i+1].focus()
-    })
-}
+codes.forEach((input, index) => {
+    input.addEventListener("input", () => {
+        if (input.value.length === 1 && index < codes.length - 1) {
+            codes[index + 1].focus(); // Move focus to next input
+        }
+    });
+
+    input.addEventListener("keydown", (e) => {
+        if (e.key === "Backspace" && index > 0 && input.value.length === 0) {
+            codes[index - 1].focus(); // Move focus to previous input
+        }
+    });
+});
