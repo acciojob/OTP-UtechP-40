@@ -12,4 +12,14 @@ codes.forEach((input, index) => {
             codes[index - 1].focus(); // Move focus to previous input
         }
     });
+
+    // To ensure focus is correctly handled
+    input.addEventListener("focus", () => {
+        if (input.value.length > 0 && index < codes.length - 1) {
+            codes[index + 1].focus(); // Skip to the next input if already filled
+        }
+    });
 });
+
+// Optional: Set focus to the first input field initially
+codes[0].focus();
